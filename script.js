@@ -39,7 +39,7 @@ window.changeProfession = function () {
     }
 
     // Change profession every 4 seconds (3000ms + 1000ms for fade-out)
-    setInterval(updateProfession, 4000);
+    setInterval(updateProfession, 2000);
 };
 
 // Call this function when the page loads
