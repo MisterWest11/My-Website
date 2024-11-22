@@ -46,3 +46,37 @@ window.changeProfession = function () {
 window.onload = function() {
     changeProfession();
 };
+
+
+//clear form
+document.getElementById('contactForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const form = e.target;
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
+    const statusMessage = document.getElementById('statusMessage');
+
+    try {
+        const response = await fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data),
+        });
+
+        if (response.ok) {
+            const result = await response.json();
+            statusMessage.textContent = 'Form submitted successfully!';
+            statusMessage.style.color = 'green';
+            form.reset();
+        } else {
+            const error = await response.json();
+            statusMessage.textContent = `Error: ${error.message}`;
+            statusMessage.style.color = 'red';
+        }
+    } catch (error) {
+        statusMessage.textContent = 'There was an error submitting the form. Please try again.';
+        statusMessage.style.color = 'red';
+        console.error('Error:', error);
+    }
+});
