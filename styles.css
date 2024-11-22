@@ -20,6 +20,13 @@ section {
     margin-bottom: 40px; /* Adjust spacing below the button */
 }
 
+.profile-image {
+    border-radius: 30px;
+    width: 400px;
+    height: auto;
+    margin-right: 20px; /* Space between image and text */
+}
+
 .skills-section {
     background-color: #e9ecef;
 }
