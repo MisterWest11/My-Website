@@ -534,45 +534,38 @@
 
                     <input type="hidden" name="access_key" value="e9c2520f-9372-46b5-b4fa-c6406da1f19d">
                     
-                    <div class="mb-3">
-                     
-                        <label for="name" class="form-label">Name</label>
-                     
-                        <input type="text" class="form-control" id="name" placeholder="Your Name" required>
-                    
-                    </div>
-                    
-                    <div class="mb-3">
-                        
-                        <label for="email" class="form-label">Email address</label>
-                        
-                        <input type="email" class="form-control" id="email" placeholder="Your Email" required>
-                    
-                    </div>
-                    
-                    <div class="mb-3">
-                        
-                        <label for="subject" class="form-label">Subject</label>
-                        
-                        <input type="text" class="form-control" id="subject" placeholder="Subject" required>
-                    
-                    </div>
-                    
-                    <div class="mb-3">
-                        
-                        <label for="message" class="form-label">Message</label>
-                        
-                        <textarea class="form-control" id="message" rows="5" placeholder="Your Message" required></textarea>
-                    
-                    </div>
-                    
-                    <button type="submit" class="btn btn-primary">Send Message</button>
+                   <!-- Name Field -->
+                   <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
+                </div>
                 
-                </form>
+                <!-- Email Field -->
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required>
+                </div>
                 
-                <div id="statusMessage" class="mt-3"></div> <!-- For displaying success or error message -->
+                <!-- Subject Field -->
+                <div class="mb-3">
+                    <label for="subject" class="form-label">Subject</label>
+                    <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required>
+                </div>
+                
+                <!-- Message Field -->
+                <div class="mb-3">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea class="form-control" id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                </div>
+                
+                <!-- Submit Button -->
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
             
-            </div>
+            <!-- Status Message for Success or Error -->
+            <div id="statusMessage" class="mt-3"></div>
+        </div>
+
 
             <!-- Contact Info and Social Links -->
             <div class="col-md-6">
