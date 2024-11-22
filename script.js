@@ -1,4 +1,14 @@
 
+const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        const navbarToggler = document.getElementById('navbarNav');
+        const bsCollapse = new bootstrap.Collapse(navbarToggler, { toggle: false });
+        bsCollapse.hide();  // Close the navbar
+    });
+});
+
+
 window.changeProfession = function () {
     const professions = [
         "Full Stack Developer",
