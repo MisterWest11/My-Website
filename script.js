@@ -10,8 +10,8 @@ navLinks.forEach(link => {
 
 window.changeProfession = function () {
     const professions = [
-        "App Developer",
-        "Data & BI Analyst"
+        " an App Developer",
+        "a Data & BI Analyst"
     ];
 
     let currentIndex = 0;
