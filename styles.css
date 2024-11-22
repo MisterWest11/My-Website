@@ -9,6 +9,14 @@ header {
 section {
     background-color: #ffffff; /* White background for each section */
 }
+
+#home img {
+    margin-top: 20px; /* Add space above the image */
+}
+#home .btn {
+    margin-bottom: 40px; /* Adjust spacing below the button */
+}
+
 .skills-section {
     background-color: #e9ecef;
 }
