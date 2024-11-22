@@ -8,11 +8,9 @@ navLinks.forEach(link => {
     });
 });
 
-
 window.changeProfession = function () {
     const professions = [
-        "Full Stack Developer",
-        "Mobile App Developer",
+        "App Developer",
         "Data & BI Analyst"
     ];
 
@@ -25,18 +23,26 @@ window.changeProfession = function () {
     }
 
     function updateProfession() {
+        // Add the "fadeOut" class to start the exit animation
         professionElement.classList.remove('animate__fadeInDownBig');
         professionElement.classList.add('animate__fadeOutDownBig');
 
+        // After the fade-out animation finishes, change the text and trigger the fade-in
         setTimeout(() => {
             currentIndex = (currentIndex + 1) % professions.length;
             professionElement.textContent = professions[currentIndex];
 
+            // Trigger the "fadeIn" animation after updating the text
             professionElement.classList.remove('animate__fadeOutDownBig');
             professionElement.classList.add('animate__fadeInDownBig');
-        }, 1000); // Adjust time to match the animation duration
+        }, 1000); // Adjust this time to match the animation duration (1000ms = 1s)
     }
 
-    // Change profession every 4 seconds
-    setInterval(updateProfession, 3000);
+    // Change profession every 4 seconds (3000ms + 1000ms for fade-out)
+    setInterval(updateProfession, 4000);
+};
+
+// Call this function when the page loads
+window.onload = function() {
+    changeProfession();
 };
