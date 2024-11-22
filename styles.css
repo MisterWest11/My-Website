@@ -1,0 +1,33 @@
+body {
+    background-color: #f0f0f0; /* Light gray background */
+}
+
+header {
+    background-color: #343a40; /* Keep the navbar dark for contrast */
+}
+
+section {
+    background-color: #ffffff; /* White background for each section */
+}
+.skills-section {
+    background-color: #e9ecef;
+}
+
+    .skills-section ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .skills-section li {
+        margin: 10px 0;
+        font-size: 1.1rem;
+        color: #000000;
+    }
+
+.card {
+    transition: transform 0.2s;
+}
+
+    .card:hover {
+        transform: scale(1.05);
+    }
